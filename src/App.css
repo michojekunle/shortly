@@ -215,7 +215,7 @@ html {
     line-height: 6rem;
   }
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 880px) {
   .hero-section .content h1 {
     font-size: 4rem;
     line-height: 5rem;
