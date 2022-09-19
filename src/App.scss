@@ -1,3 +1,4 @@
+//importing font family
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
 $Cyan: hsl(180, 66%, 49%);
@@ -8,6 +9,7 @@ $GrayishViolet: hsl(257, 7%, 63%);
 $VeryDarkBlue: hsl(255, 11%, 22%);
 $VeryDarkViolet: hsl(260, 8%, 14%);
 
+//reusable style for buttons on this page
 @mixin button($bdrd) {
    padding: 1.3rem 3.5rem;
    color: #fff;
@@ -15,8 +17,11 @@ $VeryDarkViolet: hsl(260, 8%, 14%);
    text-align: center;
    background-color: $Cyan;
    border-radius: $bdrd;
+   border: none;
+   outline: none;
 }
 
+//General Styles
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +33,7 @@ html {
     font-size: 62.5%;
 }
 
+//Navbar Styles 
 .navbar {
     display: flex;
     gap: 2.8rem;
@@ -89,9 +95,23 @@ html {
         padding: 3rem 8rem;
     }
 
-    @media screen and (max-width: 868px) {
-        padding: 3rem 6rem;        
+    @media screen and (max-width: 898px) {
+        padding: 3rem 6rem;  
+        
+        .nav-links, .page-nav-links, .user-nav-links {
+            display: flex;
+            align-items: center;
+        
+            & li {
+                list-style: none;
+                margin: 0 1.4rem; 
+            }
+        }    
     }
+
+
+
+
 
     @media screen and (max-width: 768px) {
 
@@ -109,7 +129,7 @@ html {
             border-radius: 3rem;
             gap: 5rem;
             padding: 4rem;
-            transition: .6s ease;
+            transition: 1s ease;
 
             &.active {
                 top: 12%;           
@@ -176,17 +196,171 @@ html {
             display: block;
             font-size: 1.8rem;
             color: $Gray;
+            cursor: pointer;
+            border-radius: 100%;
+            padding: 1rem;
+            transition: .5s;
+        }
+
+        #toggle-nav:focus, #toggle-nav:hover {
+            background-color: hsla(0, 0%, 75%, .8);
+            color: #fff;
+            border-radius: 50%;
+            padding: 1rem 1.2rem;
         }
 
         .brand-logo img {
             width: 9rem;
         }
     }
-    
+
     @media screen and (max-width: 400px) {
         padding: 3rem 2rem;         
     }
 }
+
+
+// Hero-Section Styles
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 12rem;
+    width: 100%;
+    margin-top: 4rem;
+    overflow: hidden;
+    margin-bottom: 5rem;
+
+    .content h1 {
+        font-size: 7rem;
+        line-height: 8rem;
+        color: $VeryDarkViolet;
+        max-width: 58rem;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 6rem;
+            line-height: 7rem;
+        }
+
+        @media screen and (max-width: 1000px) {
+            font-size: 5rem;
+            line-height: 6rem;    
+        }
+
+        @media screen and (max-width: 820px) {
+            font-size: 4rem;   
+            line-height: 5rem;    
+        }
+    }
+
+    .content p {
+        color: $Gray;
+        max-width: 58rem;
+        margin: 2rem 0;
+        width: 75%;
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 1.6rem;
+        }
+
+        @media screen and (max-width: 1000px) {
+            font-size: 1.4rem;
+            line-height: 2rem;    
+        }
+
+        @media screen and (max-width: 820px) {
+            font-size: 1.3rem;            
+        }
+    }
+
+    .content button {
+        @include button(6rem);
+        transition: .5s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(119, 255, 255, 1);
+        }
+    }
+
+
+    .main-illustration img{
+        width: 120%;
+          
+    }
+
+    @media screen and (max-width: 1000px) {
+        padding-left: 8rem;
+        .content {
+            padding-right: 8rem;
+        }
+    }
+
+    @media screen and (max-width: 868px) {
+        padding-left: 6rem;  
+        .content {
+            padding-right: 6rem;
+        }      
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+        padding-left: 5rem;
+        text-align: center;
+        .content {
+            padding-right: 5rem;
+        }
+
+        .main-illustration img {
+            height: 30vh;
+            min-height: 40rem;
+            max-height: 45rem;
+            margin-bottom: 4rem;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .content h1 {
+            font-size: 6rem;
+            line-height: 7rem;
+        }
+
+        .content p{
+            width: 100%;
+            max-width: 35rem;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .content h1 {
+            font-size: 4.2rem;
+            line-height: 5rem;
+        }
+    
+    }
+
+    @media screen and (max-width: 400px) {
+        padding-left: 2rem;   
+        
+        .content {
+            padding-right: 2rem;
+
+            h1 {
+                font-size: 4rem;
+                line-height: 4rem;
+            }
+        }
+
+    }
+}
+
 
 
 
