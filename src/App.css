@@ -58,6 +58,7 @@ html {
   text-align: center;
   background-color: hsl(180deg, 66%, 49%);
   border-radius: 6rem;
+  cursor: pointer;
   border: none;
   outline: none;
 }
@@ -142,6 +143,7 @@ html {
     text-align: center;
     background-color: hsl(180deg, 66%, 49%);
     border-radius: 6rem;
+    cursor: pointer;
     border: none;
     outline: none;
     padding: 1.5rem 40%;
@@ -229,22 +231,6 @@ html {
   font-size: 1.8rem;
   line-height: 2.7rem;
 }
-@media screen and (max-width: 1200px) {
-  .hero-section .content p {
-    font-size: 1.6rem;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .hero-section .content p {
-    font-size: 1.4rem;
-    line-height: 2rem;
-  }
-}
-@media screen and (max-width: 820px) {
-  .hero-section .content p {
-    font-size: 1.3rem;
-  }
-}
 .hero-section .content button {
   padding: 1.3rem 3.5rem;
   color: #fff;
@@ -252,6 +238,7 @@ html {
   text-align: center;
   background-color: hsl(180deg, 66%, 49%);
   border-radius: 6rem;
+  cursor: pointer;
   border: none;
   outline: none;
   transition: 0.5s;
@@ -325,5 +312,152 @@ html {
   .hero-section .content h1 {
     font-size: 4rem;
     line-height: 4rem;
+  }
+}
+
+.section-two {
+  width: 100%;
+  background-color: hsl(0deg, 0%, 75%);
+  padding-bottom: 7rem;
+}
+.section-two h1 {
+  text-align: center;
+}
+
+.boost-links {
+  text-align: center;
+  padding: 5rem 0;
+  background: url("./images/bg-boost-desktop.svg"), hsl(257deg, 27%, 26%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.boost-links h1 {
+  font-size: 5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.boost-links button {
+  padding: 1.3rem 3.5rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background-color: hsl(180deg, 66%, 49%);
+  border-radius: 6rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.boost-links button:hover {
+  background-color: rgb(119, 255, 255);
+}
+@media screen and (max-width: 600px) {
+  .boost-links {
+    background: url("./images/bg-boost-mobile.svg"), hsl(257deg, 27%, 26%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .boost-links h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .boost-links h1 {
+    font-size: 2rem;
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 5rem 12rem;
+  background-color: hsl(260deg, 8%, 14%);
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+footer .brand-logo {
+  flex: 3;
+}
+footer .features, footer .resources, footer .company {
+  flex: 1;
+  font-size: 1.8rem;
+  margin: 0 2rem;
+}
+footer .features p, footer .resources p, footer .company p {
+  color: #fff;
+  margin-bottom: 2.4rem;
+  font-weight: 500;
+}
+footer .features li, footer .resources li, footer .company li {
+  list-style-type: none;
+  margin: 1.4rem 0;
+  color: hsl(0deg, 0%, 75%);
+  transition: 0.4s;
+  cursor: pointer;
+}
+footer .features li:hover, footer .resources li:hover, footer .company li:hover {
+  color: hsl(180deg, 66%, 49%);
+}
+footer .socials {
+  flex: 2;
+  margin-left: 2rem;
+}
+footer .socials svg {
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: 1s;
+}
+footer .socials svg:hover path {
+  fill: hsl(180deg, 66%, 49%);
+}
+@media screen and (max-width: 1000px) {
+  footer {
+    padding: 5rem 8rem;
+  }
+}
+@media screen and (max-width: 898px) {
+  footer {
+    padding: 5rem 6rem;
+  }
+  footer .features, footer .resources, footer .company {
+    flex: 1;
+    font-size: 1.4rem;
+    margin: 0 2rem;
+  }
+  footer .features p, footer .resources p, footer .company p {
+    color: #fff;
+    margin-bottom: 2.4rem;
+    font-weight: 500;
+  }
+  footer .socials {
+    margin-left: 1rem;
+  }
+  footer .socials svg {
+    margin: 0 0.5rem;
+    transform: scale(0.7);
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 5rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  footer .brand-logo {
+    margin-bottom: 2rem;
+  }
+  footer .features, footer .company, footer .resources {
+    margin: 1.6rem 0;
+  }
+  footer .features p, footer .company p, footer .resources p {
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+  }
+  footer .socials {
+    margin-top: 2rem;
   }
 }/*# sourceMappingURL=App.css.map */

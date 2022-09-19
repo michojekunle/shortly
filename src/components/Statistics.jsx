@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Statistics = () => {
+const Statistics = ({imageUrl, title, content}) => {
   return (
-    <div>Statistics</div>
+    <div className='statistics'>
+      <img src={imageUrl} alt={title} />
+      <h3>{title}</h3>
+      <p>{content}</p>
+    </div>
   )
 }
 

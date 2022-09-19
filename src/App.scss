@@ -17,6 +17,7 @@ $VeryDarkViolet: hsl(260, 8%, 14%);
    text-align: center;
    background-color: $Cyan;
    border-radius: $bdrd;
+   cursor: pointer;
    border: none;
    outline: none;
 }
@@ -260,19 +261,6 @@ html {
         width: 75%;
         font-size: 1.8rem;
         line-height: 2.7rem;
-
-        @media screen and (max-width: 1200px) {
-            font-size: 1.6rem;
-        }
-
-        @media screen and (max-width: 1000px) {
-            font-size: 1.4rem;
-            line-height: 2rem;    
-        }
-
-        @media screen and (max-width: 820px) {
-            font-size: 1.3rem;            
-        }
     }
 
     .content button {
@@ -361,9 +349,169 @@ html {
 }
 
 
+.section-two {
+    width: 100%;
+    background-color: $Gray;
+    padding-bottom: 7rem;
+
+    .link-shortener {
+
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
 
 
 
+.boost-links {
+    text-align: center;
+    padding: 5rem 0;
+    background: url('./images/bg-boost-desktop.svg'), $DarkViolet;
+    background-position:  center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h1 {
+        font-size: 5rem;
+        color: #fff;
+        margin-bottom: 2rem;
+    }
+
+    button {
+        @include button(6rem);
+        transition: .5s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(119, 255, 255, 1);
+        }
+    }
+
+    @media screen and (max-width: 600px){
+        background: url('./images/bg-boost-mobile.svg'), $DarkViolet;
+        background-position:  center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        h1 {
+            font-size: 2rem;
+        }          
+    }
+}
+
+footer {
+    width: 100%;
+    padding: 5rem 12rem;
+    background-color: $VeryDarkViolet;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    .brand-logo {
+        flex: 3;
+    }
+
+    .features, .resources, .company {
+        flex: 1;
+        font-size: 1.8rem;
+        margin: 0 2rem;
+        
+        p {
+            color: #fff;
+            margin-bottom: 2.4rem;  
+            font-weight: 500; 
+        }
+
+        li {
+            list-style-type: none;
+            margin: 1.4rem 0;
+            color: $Gray;
+            transition: .4s;
+            cursor: pointer;
+
+            &:hover {
+                color: $Cyan;
+            }
+        }
+    }
+
+    .socials {
+        flex: 2;;
+        margin-left: 2rem;
+
+        svg {
+            margin: 0 1rem;
+            cursor: pointer;
+            transition: 1s;
+
+            &:hover path {
+                fill: $Cyan;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        padding: 5rem 8rem;
+
+    }
+
+    @media screen and (max-width: 898px) {
+        padding: 5rem 6rem;  
+
+        .features, .resources, .company {
+            flex: 1;
+            font-size: 1.4rem;
+            margin: 0 2rem;
+            
+            p {
+                color: #fff;
+                margin-bottom: 2.4rem;  
+                font-weight: 500; 
+            }
+        }
+
+        .socials {
+            margin-left:1rem;
+
+            svg {
+                margin: 0 .5rem;
+                transform: scale(.7);
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding:5rem;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+       
+
+        .brand-logo {
+            margin-bottom: 2rem;
+        }
+        .features, .company, .resources {
+            margin: 1.6rem 0;
+
+            p{
+                margin-bottom: .8rem;
+                font-size: 1.8rem;
+            }
+        }
+
+        .socials {
+            margin-top: 2rem;
+        }
+    }
+}
 
 
 
