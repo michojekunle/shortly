@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+$Cyan: hsl(180, 66%, 49%);
+$DarkViolet: hsl(257, 27%, 26%);
+$Red: hsl(0, 87%, 67%);
+$Gray: hsl(0, 0%, 75%);
+$GrayishViolet: hsl(257, 7%, 63%);
+$VeryDarkBlue: hsl(255, 11%, 22%);
+$VeryDarkViolet: hsl(260, 8%, 14%);
+
+@mixin button($bdrd) {
+   padding: 1.3rem 3.5rem;
+   color: #fff;
+   font-weight: 700;
+   text-align: center;
+   background-color: $Cyan;
+   border-radius: $bdrd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.navbar {
+    display: flex;
+    gap: 2.8rem;
+    width: 100%;
+    padding: 4rem 12rem;
+    align-items: center;
+
+    #toggle-nav {
+        display: none;
+    }
+
+    .brand-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 13rem;
+            cursor: pointer;
+        }
+    }
+
+    .nav-links, .page-nav-links, .user-nav-links {
+        display: flex;
+        align-items: center;
+    
+        & li {
+            list-style: none;
+            margin: 0 2rem; 
+            
+            a {
+                text-decoration: none;
+                color: $Gray;
+                font-size: 1.8rem;
+                font-weight: 700;
+                transition: .4s;
+                
+                &:hover {
+                    color:hsl(260, 8%, 14%);
+                }
+            }
+        }
+    }
+    
+    .nav-links {
+        width: 90%;
+        justify-content: space-between;
+    
+        & .link .user-nav-links li:last-child a {
+            @include button(6rem);
+    
+            &:hover {
+                background-color: rgba(119, 255, 255, 1);
+            }
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        padding: 3rem 8rem;
+    }
+
+    @media screen and (max-width: 868px) {
+        padding: 3rem 6rem;        
+    }
+
+    @media screen and (max-width: 768px) {
+
+        padding: 3rem 5rem;
+        justify-content: space-between;
+
+
+        .nav-links {
+            position: absolute;
+            top: -130%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $DarkViolet;
+            flex-direction: column;
+            border-radius: 3rem;
+            gap: 5rem;
+            padding: 4rem;
+            transition: .6s ease;
+
+            &.active {
+                top: 12%;           
+            }
+
+            li.line {
+                width: 100%;
+                height: .1rem;
+                background-color: hsla(0, 0%, 75%, .6);
+                margin: 0;
+                padding: 0;
+            } 
+
+            .link {
+                width: 100%;
+            }
+
+            .page-nav-links, .user-nav-links {
+                flex-direction: column;
+                width: 100%;
+
+                & li {
+                    list-style: none;
+                    margin: 1.5rem 0; 
+                    
+                    a {
+                        text-decoration: none;
+                        color: $Gray;
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        transition: .4s;
+                        
+                        &:hover {
+                            color:hsl(0, 0%, 100%);
+                        }
+                    }
+                }
+            }
+
+            & .link .user-nav-links li:last-child {
+                width: 100%;
+                margin-top: 3rem;
+                text-align: center;
+
+                a {
+                    @include button(6rem);
+                    padding: 1.5rem 40%;
+
+                    @media screen and (max-width: 400px){
+                        padding: 1.5rem 33%;                        
+                    }
+
+                    &:hover {
+                        background-color: rgba(119, 255, 255, 1);
+                    }
+                }
+            
+            }
+        }
+
+
+        
+        #toggle-nav {
+            display: block;
+            font-size: 1.8rem;
+            color: $Gray;
+        }
+
+        .brand-logo img {
+            width: 9rem;
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+        padding: 3rem 2rem;         
+    }
+}
+
+
+
+
+
+
