@@ -5,16 +5,16 @@ const Link = ({originalLink, shortLink}) => {
     const copyLink = (e) => {
         navigator.clipboard.writeText(shortLink); 
         e.target.value = 'Copied!'; 
-        e.target.style.backgroundColor = 'hsl(260, 8%, 14%)'; 
+        e.target.style.backgroundColor = ' hsl(257, 27%, 26%)'; 
     }
 
   return (
-    <li>
+    <li className='short-link'>
         <p className="link">{originalLink}</p>
-        <div className="copy-short-link">
+        <span className="copy-short-link">
           <p className="link">{shortLink}</p>
           <input type='button' onClick={copyLink} value="Copy"/>
-        </div>
+        </span>
     </li>
   )
 }

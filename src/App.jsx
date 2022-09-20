@@ -23,7 +23,7 @@ function App() {
         
         <div className="statistics">
           <div className='bg-statistics'></div>
-          <Statistics imageUrl={iconBR} title={'Brand Reconotion'} content={"Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content."}/>
+          <Statistics imageUrl={iconBR} title={'Brand Recognition'} content={"Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content."}/>
           <Statistics imageUrl={iconDR} title={"Detailed Records"} content={"Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions."}/>
           <Statistics imageUrl={iconFC} title={"Fully Customizable"} content={"Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."}/>
         </div>

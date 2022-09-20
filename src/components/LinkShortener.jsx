@@ -18,7 +18,7 @@ const LinkShortener = () => {
           console.log(res.status);
           if(res.status >= 400) {
             alert('Invalid Link Please Enter a Valid URL');
-            console.log('Invalid Link Please Enter a Valid URL');
+            console.log('Invalid URL, Please Enter a Valid URL..');
           } else {
             return res.json();
           }
@@ -38,7 +38,7 @@ const LinkShortener = () => {
   }
 
   return (
-    <div>
+    <div className='link-shortener'>
       <form>
         <div className="input-field">
           <input type="text" placeholder='Shorten a link here...' value={originalLink} onChange={(e) => { setOriginalLink(e.target.value); console.log(originalLink); }}/>
