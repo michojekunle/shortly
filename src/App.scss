@@ -303,8 +303,8 @@ html {
 
         .main-illustration img {
             height: 30vh;
-            min-height: 40rem;
-            max-height: 45rem;
+            min-height: 23rem;
+            max-height: 35rem;
             margin-bottom: 4rem;
         }
 
@@ -371,7 +371,7 @@ html {
             align-items: flex-start;
             justify-content: space-between;
             width: 100%;
-            padding: 3.5rem;
+            padding: 4.5rem;
             border-radius: .8rem;
             margin-top: -6rem;
             gap: 2rem;
@@ -555,6 +555,10 @@ html {
                 color: $Gray;
                 margin-top: 2rem;
                 line-height: 3.2rem;
+
+                @media screen and (min-width: 768px) and (max-width: 900px) {
+                    font-size: 1.4rem;                    
+                }
 
             }
 
