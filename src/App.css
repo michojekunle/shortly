@@ -13,7 +13,7 @@ html {
 .container {
   max-width: 150rem;
   margin: 0 auto;
-  box-shadow: 0 0 5px 20px hsl(180deg, 66%, 49%);
+  box-shadow: 0 0 20px 5px hsl(180deg, 66%, 49%);
 }
 
 .navbar {
