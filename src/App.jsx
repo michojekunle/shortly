@@ -10,7 +10,7 @@ import iconFC from './images/icon-fully-customizable.svg';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <Navbar/>
       <HeroSection/>
       <div className="section-two" role='section-two'>
