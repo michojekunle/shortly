@@ -334,6 +334,7 @@ html {
 }
 .section-two .link-shortener {
   width: 100%;
+  max-width: 800px;
   margin-bottom: 3rem;
 }
 .section-two .link-shortener form {
